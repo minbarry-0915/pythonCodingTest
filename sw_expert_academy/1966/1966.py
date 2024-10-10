@@ -12,3 +12,6 @@ for test_case in range(1, T + 1):
     
     print(f'#{test_case} {" ".join(map(str, numbers))}')  # 정렬된 리스트 출력
     # ///////////////////////////////////////////////////////////////////////////////////
+'''
+출처 : https://swexpertacademy.com/
+'''

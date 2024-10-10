@@ -49,3 +49,6 @@ for test_case in range(1, T + 1):
             result += i
     print(f'#{test_case} {result}' )
     # ///////////////////////////////////////////////////////////////////////////////////
+'''
+출처 : https://swexpertacademy.com/
+'''

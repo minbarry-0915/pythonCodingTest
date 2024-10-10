@@ -42,3 +42,6 @@ for test_case in range(1, T + 1):
     count = count_fit_position(grid, N, K)
     print(f'#{test_case} {count}')
     # ///////////////////////////////////////////////////////////////////////////////////
+'''
+출처 : https://swexpertacademy.com/
+'''
