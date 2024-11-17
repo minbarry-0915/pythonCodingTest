@@ -8,9 +8,9 @@ for test_case in range(1,11):
         found = False
         for i in range(10):
             idx = password.find(str(i) * 2) #찾으면 해당 인덱스 반환, 못찾으면 -1
-            
+
             if idx != -1:
-                password = password[: idx] + password[idx + 2:]
+                password = password[: idx] + password[idx + 2:] #찾은 인덱스 기준 두칸 정리
                 found = True
         
         if not found:

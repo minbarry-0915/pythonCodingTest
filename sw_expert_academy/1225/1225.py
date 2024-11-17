@@ -22,7 +22,7 @@ for test_case in range(1, T+1):
     digits = list(map(int, input().split()))
     
     while digits[-1] != 0:
-        for i in range(1,6):    
+        for i in range(1,6): #1부터 5까지
             buffer = dequeue(digits)
             if buffer is not None:
                 buffer -= i

@@ -6,7 +6,13 @@ T = int(input())
 
 
 def check_all_numbers_true(numbers):
-    return all(numbers.values())
+    result = True
+    for key, values in numbers.items():
+        if values is False:
+            result = False
+            break
+    return result
+    #return all(numbers.values())
 
 def check_numbers(digits,numbers):
     for digit in digits:
@@ -19,13 +25,13 @@ for test_case in range(1,T+1):
     numbers = {i: False for i in range(10)}
     
     count = 0
-    while not check_all_numbers_true(numbers):
+    while not check_all_numbers_true(numbers): #False
         count += 1 
         
-        current_N = N * count
-        digits = [int(digit) for digit in str(current_N)]   
-        check_numbers(digits, numbers)    
-    
+        current_N = N * count #ex) N = 1295 currnet_N = 2590
+        digits = [int(digit) for digit in str(current_N)] #2,5,9,0
+        check_numbers(digits, numbers)
+
     total = N * count
     
     print(f'#{test_case} {total}')

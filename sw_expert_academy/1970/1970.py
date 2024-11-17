@@ -29,7 +29,7 @@ for test_case in range(1, T + 1):
     arr.append(str(total['50']))
     arr.append(str(total['10']))
     
-    print(f'#{test_case}');
+    print(f'#{test_case}')
     print(' '.join(arr))    
     # ///////////////////////////////////////////////////////////////////////////////////
 '''

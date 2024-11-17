@@ -30,7 +30,7 @@ def decode_line(line):
             digits.append(code_patterns[segment])
         else:
             return []
-    return digits 
+    return digits
 
 for test_case in range(1,T+1):
     N, M = map(int, input().split())

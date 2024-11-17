@@ -13,10 +13,10 @@ for test_case in range(1,11):
     for col in range(100):
         state = 0 #0 : 정상 , 1: 교착
         for row in range(100):
-            if matrix[row][col] == 1:
+            if matrix[row][col] == 1: #N극 만나고
                 state = 1
-            if matrix[row][col] == 2 and state == 1:
-                total += 1
+            if matrix[row][col] == 2 and state == 1: #s극 만났을때
+                total += 1 #교착
                 state = 0 # 상태 초기화
                 
                 

@@ -34,7 +34,7 @@ print(f)                                문자열 1개 출력하는 예제
 단, 채점을 위해 코드를 제출하실 때에는 반드시 아래 구문을 지우거나 주석 처리 하셔야 합니다.
 '''
 import sys
-sys.stdin = open("input.txt", "r")
+sys.stdin = open("input.txt", "r", encoding="utf-8")
 
 T = 10
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
@@ -43,17 +43,16 @@ for test_case in range(1, T + 1):
     case_num = int(input())
     target = input().strip()
     sentence = input().strip()
-    '''
+
     count = 0
     target_len = len(target)
-    
+
     for i in range(len(sentence) - target_len + 1):
-        if sentence[i: i+target_len ] == target:
+        if sentence[i: i + target_len] == target:
             count += 1
-            
+
     print(f'#{test_case} {count}')
-    '''
-    
+
     #방법 2
     count = sentence.count(target)
     print(f'#{test_case} {count}')

@@ -4,6 +4,8 @@ sys.stdin = open('input.txt', 'r')
 base64_table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 base64_map = {char: idx for idx, char in enumerate(base64_table)}
 
+#enumerate : 키랑 값을 만들어줌
+
 T = int(input())
 
 def base64_decode(encoded_str):

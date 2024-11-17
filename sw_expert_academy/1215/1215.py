@@ -38,7 +38,6 @@ sys.stdin = open("input.txt", "r")
 
 
 def is_palindrome(word):
-
     return word == word[::-1]
 
 T = 10
@@ -46,20 +45,16 @@ T = 10
 for test_case in range(1, T + 1):
     # ///////////////////////////////////////////////////////////////////////////////////
     word_len = int(input())
-    matrix = [list(input()) for _ in range(8)]
-    
+    matrix = [list(input().strip()) for _ in range(8)]
+
     count = 0
-    
-    #행 비교
-    for row in range(8):    
-        for col in range(8- word_len + 1):
-            word = matrix[row][col : col + word_len]
+    for row in range(8):
+        for col in range(8 - word_len + 1) :
+            word = matrix[row][col: col + word_len]
             result = is_palindrome(word)
             if result:
                 count += 1
-        
     for col in range(8):
-        word = []
         for row in range(8 - word_len + 1):
             word = [matrix[row + k][col] for k in range(word_len)]
             result = is_palindrome(word)
